@@ -1,7 +1,5 @@
 package org.ies.vehicles.model;
 
-import org.ies.vehicles.components.VehicleType;
-
 import java.util.Objects;
 
 public class Vehicle {
@@ -33,6 +31,22 @@ public class Vehicle {
         this.plate = plate;
     }
 
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getPlate() {
+        return plate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,5 +58,15 @@ public class Vehicle {
     @Override
     public int hashCode() {
         return Objects.hash(vehicleType, maxSpeed, color, plate);
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vehicleType=" + vehicleType +
+                ", maxSpeed=" + maxSpeed +
+                ", color='" + color + '\'' +
+                ", plate='" + plate + '\'' +
+                '}';
     }
 }
