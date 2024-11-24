@@ -1,4 +1,4 @@
-package org.ies.vehicles.model;
+package model;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -55,7 +55,7 @@ public class Garage {
     public String toString() {
         return "Garage{" +
                 "name='" + name + '\'' +
-                ", direction='" + address + '\'' +
+                ", address='" + address + '\'' +
                 ", vehicles=" + Arrays.toString(vehicles) +
                 '}';
     }

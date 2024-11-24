@@ -1,4 +1,4 @@
-package org.ies.vehicles.model;
+package model;
 
 import java.util.Objects;
 
@@ -15,36 +15,36 @@ public class Vehicle {
         this.plate = plate;
     }
 
-    public void setVehicleType(VehicleType vehicleType) {
-        this.vehicleType = vehicleType;
-    }
-
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setPlate(String plate) {
-        this.plate = plate;
-    }
-
     public VehicleType getVehicleType() {
         return vehicleType;
+    }
+
+    public void setVehicleType(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
     }
 
     public int getMaxSpeed() {
         return maxSpeed;
     }
 
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
     public String getColor() {
         return color;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public String getPlate() {
         return plate;
+    }
+
+    public void setPlate(String plate) {
+        this.plate = plate;
     }
 
     @Override
@@ -52,7 +52,7 @@ public class Vehicle {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Vehicle vehicle = (Vehicle) o;
-        return maxSpeed == vehicle.maxSpeed && Objects.equals(vehicleType, vehicle.vehicleType) && Objects.equals(color, vehicle.color) && Objects.equals(plate, vehicle.plate);
+        return maxSpeed == vehicle.maxSpeed && vehicleType == vehicle.vehicleType && Objects.equals(color, vehicle.color) && Objects.equals(plate, vehicle.plate);
     }
 
     @Override

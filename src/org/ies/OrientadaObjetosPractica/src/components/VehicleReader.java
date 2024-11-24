@@ -1,7 +1,7 @@
-package org.ies.vehicles.components;
+package components;
 
-import org.ies.vehicles.model.Vehicle;
-import org.ies.vehicles.model.VehicleType;
+import model.Vehicle;
+import model.VehicleType;
 
 import java.util.Scanner;
 
@@ -17,31 +17,31 @@ public class VehicleReader {
         System.out.println("Introduce los datos del vehiculo");
         int option;
         do {
-            System.out.println("Elige el tipo de vehiculo:");
-            System.out.println("1. Coche");
+            System.out.println("Elige el tipo de vehiculo");
+            System.out.println("1. Carro");
             System.out.println("2. Moto");
             System.out.println("3. Camion");
             option = scanner.nextInt();
             scanner.nextLine();
-        }while (option != 1 && option != 2 && option != 3);
+        } while (option != 1 && option != 2 && option != 3);
 
         VehicleType vehicleType;
         if (option == 1){
-            vehicleType = VehicleType.Car;
-        } else if (option == 2) {
-            vehicleType = VehicleType.Motorbike;
+            vehicleType = VehicleType.car;
+        } else if (option == 2){
+            vehicleType = VehicleType.motorbike;
         } else {
-            vehicleType = VehicleType.Truck;
+            vehicleType = VehicleType.truck;
         }
 
-        System.out.println("Velocidad maxima");
+        System.out.println("Introduce la velocidad maxima");
         int maxSpeed = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Color");
+        System.out.println("Introduce el color");
         String color = scanner.nextLine();
 
-        System.out.println("Matricula");
+        System.out.println("Introduce la matricula");
         String plate = scanner.nextLine();
 
         return new Vehicle(
